@@ -53,7 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Play audio by default
-    playAudio(audio);
+    audio.play().then(() => {
+        // Successfully started playing
+        console.log("Audio is playing.");
+    }).catch(error => {
+        // Unable to start playing
+        console.error("Failed to play audio:", error);
+    });
 
     // Initialize the audio button state
     updateAudioButton(audio, audioButton);
@@ -95,4 +101,7 @@ function updateAudioButton(audio, audioButton) {
         audioButton.textContent = "Disable Audio";
     }
 }
+
+// Your existing code...
+
 

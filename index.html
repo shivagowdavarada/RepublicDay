@@ -1,53 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- Example questions in index.html -->
+<div class="question">
+    <label for="question1">Question 1: What is the capital of India?</label>
+    <select id="question1" name="question1">
+        <option value="delhi">Delhi</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="kolkata">Kolkata</option>
+        <option value="chennai">Chennai</option>
+    </select>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Republic Day Quiz</title>
-</head>
+<div class="question">
+    <label for="question2">Question 2: Who is known as the Father of the Nation?</label>
+    <input type="text" id="question2" name="question2">
+</div>
 
-<body>
-    <div class="container">
-        <div class="background-image"></div>
-        <div class="logo">
-            <img src="Avaali-Logo1.jpg" alt="Avaali Logo">
-        </div>
-        <h1>Republic Day Quiz</h1>
-        <form id="quizForm">
-            <!-- Your multiple-choice questions and options go here -->
-            <div class="question">
-                <label for="question1">Question 1: What is the capital of India?</label>
-                <select id="question1" name="question1">
-                    <option value="delhi">Delhi</option>
-                    <option value="mumbai">Mumbai</option>
-                    <option value="kolkata">Kolkata</option>
-                    <option value="chennai">Chennai</option>
-                </select>
-                <label for="question2">Question 1: What is the capital of India?</label>
-                <select id="question2" name="question2">
-                    <option value="delhi">Delhi</option>
-                    <option value="mumbai">Mumbai</option>
-                    <option value="kolkata">Kolkata</option>
-                    <option value="chennai">Chennai</option>
-                </select>
-            </div>
+<div class="question">
+    <label for="question3">Question 3: What is the famous monument in Agra?</label>
+    <input type="text" id="question3" name="question3">
+</div>
 
-            <!-- Add more questions as needed -->
-
-            <button type="button" onclick="checkAnswers()">Submit</button>
-        </form>
-
-        <button id="audioButton" onclick="enableAudio()">Enable Audio</button>
-
-        <audio id="backgroundMusic" loop>
-            <source src="republic_day_music.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+<div class="question">
+    <label for="question4">Question 4: What are the three colors of the Indian national flag?</label>
+    <input type="text" id="question4" name="question4">
+</div>

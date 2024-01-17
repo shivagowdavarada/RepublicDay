@@ -4,15 +4,15 @@ function checkAnswers() {
         question1: "delhi",
         question2: "gandhi",
         question3: "tajmahal",
-        question4: "tricolor",
+        question4: "saffronwhitegreen",
     };
 
     // Retrieve user-selected answers
     const userAnswers = {
-        question1: document.getElementById("question1").value.toLowerCase(),
-        question2: document.getElementById("question2").value.toLowerCase(),
-        question3: document.getElementById("question3").value.toLowerCase(),
-        question4: document.getElementById("question4").value.toLowerCase(),
+        question1: getSelectedRadioValue("question1"),
+        question2: getSelectedRadioValue("question2"),
+        question3: getSelectedRadioValue("question3"),
+        question4: getSelectedRadioValue("question4"),
     };
 
     // Check user answers against correct answers
@@ -36,4 +36,22 @@ function generateCode() {
     // Generate a code based on some logic (replace with your own logic)
     const code = "ABC" + Math.floor(Math.random() * 1000);
     alert("Congratulations! Your code is: " + code);
+}
+
+function getSelectedRadioValue(question) {
+    const selectedRadio = document.querySelector(`input[name="${question}"]:checked`);
+    return selectedRadio ? selectedRadio.value : null;
+}
+
+function enableAudio() {
+    var audio = document.getElementById("backgroundMusic");
+    var audioButton = document.getElementById("audioButton");
+
+    if (audio.paused) {
+        audio.play();
+        audioButton.textContent = "Disable Audio";
+    } else {
+        audio.pause();
+        audioButton.textContent = "Enable Audio";
+    }
 }

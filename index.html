@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Republic Day Quiz, Grab your chance to get the ticket for next round!</title>
+    <title>Republic Day Quiz</title>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
         <div class="logo">
             <img src="Avaali-Logo1.jpg" alt="Avaali Logo">
         </div>
-        <h1>Republic Day Quiz</h1>
+        <h1>Republic Day Quiz, Grab your token for the next round!</h1>
         <form id="quizForm">
             <!-- Question 1 -->
             <div class="question">
@@ -48,7 +48,37 @@
                 <label for="bose">Subhash Chandra Bose</label>
             </div>
 
-            <!-- Add more questions as needed -->
+            <!-- Question 3 -->
+            <div class="question">
+                <label>Question 3: What is the famous monument in Agra?</label>
+                <input type="radio" name="question3" value="tajmahal" id="tajmahal">
+                <label for="tajmahal">Taj Mahal</label>
+
+                <input type="radio" name="question3" value="qutubminar" id="qutubminar">
+                <label for="qutubminar">Qutub Minar</label>
+
+                <input type="radio" name="question3" value="lotustemple" id="lotustemple">
+                <label for="lotustemple">Lotus Temple</label>
+
+                <input type="radio" name="question3" value="indiaagate" id="indiaagate">
+                <label for="indiaagate">India Gate</label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <label>Question 4: What are the three colors of the Indian national flag?</label>
+                <input type="radio" name="question4" value="saffronwhitegreen" id="saffronwhitegreen">
+                <label for="saffronwhitegreen">Saffron, White, Green</label>
+
+                <input type="radio" name="question4" value="redwhiteblue" id="redwhiteblue">
+                <label for="redwhiteblue">Red, White, Blue</label>
+
+                <input type="radio" name="question4" value="yellowgreenred" id="yellowgreenred">
+                <label for="yellowgreenred">Yellow, Green, Red</label>
+
+                <input type="radio" name="question4" value="bluewhiteorange" id="bluewhiteorange">
+                <label for="bluewhiteorange">Blue, White, Orange</label>
+            </div>
 
             <button type="button" onclick="checkAnswers()">Submit</button>
         </form>

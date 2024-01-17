@@ -1,3 +1,57 @@
+document.addEventListener("DOMContentLoaded", function () {
+    var audio = document.getElementById("backgroundMusic");
+    var audioButton = document.getElementById("audioButton");
+
+    // Add an event listener to the audio button
+    audioButton.addEventListener("click", function () {
+        toggleAudio(audio, audioButton);
+    });
+
+    // Attempt to play audio on page load
+    playAudio(audio);
+
+    // Initialize the audio button state
+    updateAudioButton(audio, audioButton);
+});
+
+// Function to toggle audio playback
+function toggleAudio(audio, audioButton) {
+    if (audio.paused) {
+        playAudio(audio);
+    } else {
+        pauseAudio(audio);
+    }
+
+    // Update the button text based on the audio state
+    updateAudioButton(audio, audioButton);
+}
+
+// Function to play audio
+function playAudio(audio) {
+    if (audio) {
+        audio.play().then(() => {}).catch(error => {
+            console.error("Failed to play audio:", error);
+        });
+    }
+}
+
+// Function to pause audio
+function pauseAudio(audio) {
+    if (audio) {
+        audio.pause();
+    }
+}
+
+// Function to update the audio button text based on the audio state
+function updateAudioButton(audio, audioButton) {
+    if (audio.paused) {
+        audioButton.textContent = "Enable Audio";
+    } else {
+        audioButton.textContent = "Disable Audio";
+    }
+}
+
+// Your existing code...
 function checkAnswers() {
     // Define the correct answers and corresponding codes
     const correctAnswers = {
@@ -43,65 +97,15 @@ function getSelectedRadioValue(question) {
     return selectedRadio ? selectedRadio.value : null;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+function enableAudio() {
     var audio = document.getElementById("backgroundMusic");
     var audioButton = document.getElementById("audioButton");
 
-    // Add an event listener to the audio button
-    audioButton.addEventListener("click", function () {
-        toggleAudio(audio, audioButton);
-    });
-
-    // Play audio by default
-    audio.play().then(() => {
-        // Successfully started playing
-        console.log("Audio is playing.");
-    }).catch(error => {
-        // Unable to start playing
-        console.error("Failed to play audio:", error);
-    });
-
-    // Initialize the audio button state
-    updateAudioButton(audio, audioButton);
-});
-
-// Function to toggle audio playback
-function toggleAudio(audio, audioButton) {
     if (audio.paused) {
-        playAudio(audio);
-    } else {
-        pauseAudio(audio);
-    }
-
-    // Update the button text based on the audio state
-    updateAudioButton(audio, audioButton);
-}
-
-// Function to play audio
-function playAudio(audio) {
-    if (audio) {
-        audio.play().then(() => {}).catch(error => {
-            console.error("Failed to play audio:", error);
-        });
-    }
-}
-
-// Function to pause audio
-function pauseAudio(audio) {
-    if (audio) {
-        audio.pause();
-    }
-}
-
-// Function to update the audio button text based on the audio state
-function updateAudioButton(audio, audioButton) {
-    if (audio.paused) {
-        audioButton.textContent = "Enable Audio";
-    } else {
+        audio.play();
         audioButton.textContent = "Disable Audio";
+    } else {
+        audio.pause();
+        audioButton.textContent = "Enable Audio";
     }
 }
-
-// Your existing code...
-
-

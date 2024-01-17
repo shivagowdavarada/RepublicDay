@@ -43,15 +43,53 @@ function getSelectedRadioValue(question) {
     return selectedRadio ? selectedRadio.value : null;
 }
 
-function enableAudio() {
+document.addEventListener("DOMContentLoaded", function () {
     var audio = document.getElementById("backgroundMusic");
     var audioButton = document.getElementById("audioButton");
 
+    // Add an event listener to the audio button
+    audioButton.addEventListener("click", function () {
+        toggleAudio(audio, audioButton);
+    });
+
+    // Initialize the audio button state
+    updateAudioButton(audio, audioButton);
+});
+
+// Function to toggle audio playback
+function toggleAudio(audio, audioButton) {
     if (audio.paused) {
-        audio.play();
-        audioButton.textContent = "Disable Audio";
+        playAudio(audio);
     } else {
-        audio.pause();
-        audioButton.textContent = "Enable Audio";
+        pauseAudio(audio);
+    }
+
+    // Update the button text based on the audio state
+    updateAudioButton(audio, audioButton);
+}
+
+// Function to play audio
+function playAudio(audio) {
+    if (audio) {
+        audio.play().then(() => {}).catch(error => {
+            console.error("Failed to play audio:", error);
+        });
     }
 }
+
+// Function to pause audio
+function pauseAudio(audio) {
+    if (audio) {
+        audio.pause();
+    }
+}
+
+// Function to update the audio button text based on the audio state
+function updateAudioButton(audio, audioButton) {
+    if (audio.paused) {
+        audioButton.textContent = "Enable Audio";
+    } else {
+        audioButton.textContent = "Disable Audio";
+    }
+}
+

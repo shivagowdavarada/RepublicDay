@@ -1,19 +1,3 @@
-let currentPage = 1;
-
-function nextPage() {
-    const currentPageElement = document.getElementById(`page${currentPage}`);
-    currentPageElement.style.display = "none";
-
-    currentPage++;
-    const nextPageElement = document.getElementById(`page${currentPage}`);
-    if (nextPageElement) {
-        nextPageElement.style.display = "block";
-    } else {
-        // If there is no next page, show the result page
-        document.getElementById("resultPage").style.display = "block";
-    }
-}
-
 function checkAnswers() {
     // Define the correct answers and corresponding codes
     const correctAnswers = {

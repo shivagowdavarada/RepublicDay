@@ -37,6 +37,7 @@ body {
 .logo img {
     max-width: 100%;
     height: auto;
+    max-height: 100px; /* Adjust this value as needed */
     display: block;
     margin: 0 auto;
 }

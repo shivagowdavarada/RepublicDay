@@ -52,6 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleAudio(audio, audioButton);
     });
 
+    // Play audio by default
+    playAudio(audio);
+
     // Initialize the audio button state
     updateAudioButton(audio, audioButton);
 });

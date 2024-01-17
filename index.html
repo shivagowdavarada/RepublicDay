@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Republic Day Quiz</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background-image"></div>
+        <div class="logo">
+            <img src="Avaali-Logo1.png" alt="Avaali Logo">
+        </div>
+        <h1>Republic Day Quiz</h1>
+        <form id="quizForm">
+            <!-- Your multiple-choice questions and options go here -->
+            <div class="question">
+                <label for="question1">Question 1: What is the capital of India?</label>
+                <select id="question1" name="question1">
+                    <option value="delhi">Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="kolkata">Kolkata</option>
+                    <option value="chennai">Chennai</option>
+                </select>
+            </div>
+
+            <!-- Add more questions as needed -->
+
+            <button type="button" onclick="checkAnswers()">Submit</button>
+        </form>
+
+        <button id="audioButton" onclick="enableAudio()">Enable Audio</button>
+
+        <audio id="backgroundMusic" loop>
+            <source src="republic_day_music.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

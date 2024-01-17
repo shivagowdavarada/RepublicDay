@@ -14,74 +14,56 @@
         <div class="logo">
             <img src="Avaali-Logo1.jpg" alt="Avaali Logo">
         </div>
-        <h1>Republic Day Quiz, Grab your token for the next round!</h1>
-        <form id="quizForm">
-            <!-- Question 1 -->
-            <div class="question">
-                <label>Question 1: What is the capital of India?</label>
-                <input type="radio" name="question1" value="delhi" id="delhi">
-                <label for="delhi">Delhi</label>
+        <div id="quizPages">
+            <div class="page" id="page1">
+                <h1>Republic Day Quiz - Page 1</h1>
+                <form id="quizForm1">
+                    <!-- Question 1 -->
+                    <div class="question">
+                        <label>Question 1: What is the capital of India?</label>
+                        <input type="radio" name="question1" value="delhi" id="delhi1">
+                        <label for="delhi1">Delhi</label>
 
-                <input type="radio" name="question1" value="mumbai" id="mumbai">
-                <label for="mumbai">Mumbai</label>
+                        <input type="radio" name="question1" value="mumbai" id="mumbai1">
+                        <label for="mumbai1">Mumbai</label>
 
-                <input type="radio" name="question1" value="kolkata" id="kolkata">
-                <label for="kolkata">Kolkata</label>
+                        <input type="radio" name="question1" value="kolkata" id="kolkata1">
+                        <label for="kolkata1">Kolkata</label>
 
-                <input type="radio" name="question1" value="chennai" id="chennai">
-                <label for="chennai">Chennai</label>
+                        <input type="radio" name="question1" value="chennai" id="chennai1">
+                        <label for="chennai1">Chennai</label>
+                    </div>
+                    <button type="button" onclick="nextPage()">Next</button>
+                </form>
             </div>
 
-            <!-- Question 2 -->
-            <div class="question">
-                <label>Question 2: Who is known as the Father of the Nation?</label>
-                <input type="radio" name="question2" value="gandhi" id="gandhi">
-                <label for="gandhi">Mahatma Gandhi</label>
+            <div class="page" id="page2">
+                <h1>Republic Day Quiz - Page 2</h1>
+                <form id="quizForm2">
+                    <!-- Question 2 -->
+                    <div class="question">
+                        <label>Question 2: Who is known as the Father of the Nation?</label>
+                        <input type="radio" name="question2" value="gandhi" id="gandhi2">
+                        <label for="gandhi2">Mahatma Gandhi</label>
 
-                <input type="radio" name="question2" value="nehru" id="nehru">
-                <label for="nehru">Jawaharlal Nehru</label>
+                        <input type="radio" name="question2" value="nehru" id="nehru2">
+                        <label for="nehru2">Jawaharlal Nehru</label>
 
-                <input type="radio" name="question2" value="patel" id="patel">
-                <label for="patel">Sardar Patel</label>
+                        <input type="radio" name="question2" value="patel" id="patel2">
+                        <label for="patel2">Sardar Patel</label>
 
-                <input type="radio" name="question2" value="bose" id="bose">
-                <label for="bose">Subhash Chandra Bose</label>
+                        <input type="radio" name="question2" value="bose" id="bose2">
+                        <label for="bose2">Subhash Chandra Bose</label>
+                    </div>
+                    <button type="button" onclick="nextPage()">Next</button>
+                </form>
             </div>
 
-            <!-- Question 3 -->
-            <div class="question">
-                <label>Question 3: What is the famous monument in Agra?</label>
-                <input type="radio" name="question3" value="tajmahal" id="tajmahal">
-                <label for="tajmahal">Taj Mahal</label>
-
-                <input type="radio" name="question3" value="qutubminar" id="qutubminar">
-                <label for="qutubminar">Qutub Minar</label>
-
-                <input type="radio" name="question3" value="lotustemple" id="lotustemple">
-                <label for="lotustemple">Lotus Temple</label>
-
-                <input type="radio" name="question3" value="indiaagate" id="indiaagate">
-                <label for="indiaagate">India Gate</label>
+            <div class="page" id="resultPage">
+                <h1>Republic Day Quiz - Results</h1>
+                <button type="button" onclick="checkAnswers()">Submit</button>
             </div>
-
-            <!-- Question 4 -->
-            <div class="question">
-                <label>Question 4: What are the three colors of the Indian national flag?</label>
-                <input type="radio" name="question4" value="saffronwhitegreen" id="saffronwhitegreen">
-                <label for="saffronwhitegreen">Saffron, White, Green</label>
-
-                <input type="radio" name="question4" value="redwhiteblue" id="redwhiteblue">
-                <label for="redwhiteblue">Red, White, Blue</label>
-
-                <input type="radio" name="question4" value="yellowgreenred" id="yellowgreenred">
-                <label for="yellowgreenred">Yellow, Green, Red</label>
-
-                <input type="radio" name="question4" value="bluewhiteorange" id="bluewhiteorange">
-                <label for="bluewhiteorange">Blue, White, Orange</label>
-            </div>
-
-            <button type="button" onclick="checkAnswers()">Submit</button>
-        </form>
+        </div>
 
         <button id="audioButton" onclick="enableAudio()">Enable Audio</button>
 

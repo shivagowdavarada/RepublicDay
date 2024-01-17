@@ -7,6 +7,7 @@ body, h1, h2, p, ul, li {
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background: url('indian-flag.jpg') center/cover no-repeat fixed;
 }
 
 .container {
@@ -14,10 +15,9 @@ body {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with transparency */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: url('indian-flag.jpg') center/cover no-repeat;
 }
 
 .logo {

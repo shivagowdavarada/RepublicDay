@@ -3,8 +3,8 @@ function checkAnswers() {
     const correctAnswers = {
         question1: "Rabindranath Tagore",
         question2: "Gateway of India",
-        question3: "Peace and righteousness",
-        question4: "Red Fort",
+        question3: "Tableau Showcase",
+        question4: "Dr. B.R. Ambedkar",
     };
 
     // Retrieve user-selected answers

@@ -3,7 +3,7 @@ function checkAnswers() {
     const correctAnswers = {
         question1: "Rabindranath Tagore",
         question2: "Gateway of India",
-        question3: "The wheel of progress",
+        question3: "Peace and righteousness",
         question4: "Red Fort",
     };
 

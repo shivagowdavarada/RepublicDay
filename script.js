@@ -1,10 +1,10 @@
 function checkAnswers() {
     // Define the correct answers and corresponding codes
     const correctAnswers = {
-        question1: "delhi",
-        question2: "gandhi",
-        question3: "tajmahal",
-        question4: "saffronwhitegreen",
+        question1: "Rabindranath Tagore",
+        question2: "Gateway of India",
+        question3: "The wheel of progress",
+        question4: "Red Fort",
     };
 
     // Retrieve user-selected answers
